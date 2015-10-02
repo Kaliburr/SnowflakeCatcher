@@ -1,10 +1,26 @@
+Snowflake[]frosty;
 void setup()
 {
-  //your code here
+  size(400,400);
+  
+  frosty=new Snowflake[100];
+  for(int i=0;i<frosty.length;i++){
+    frosty[i]=new Snowflake();
+  }
 }
 void draw()
 {
-  //your code here
+  background(0);
+  
+  
+  for(int i=0;i<frosty.length;i++){
+    
+    frosty[i].show();
+    frosty[i].lookDown();
+   // frosty[i].erase();
+    frosty[i].move();
+    frosty[i].wrap();
+  }
 }
 void mouseDragged()
 {
@@ -13,30 +29,40 @@ void mouseDragged()
 
 class Snowflake
 {
-  //class member variable declarations
+  int x,y;
+  boolean isMoving;
   Snowflake()
   {
-    //class member variable initializations
+    x=(int)(Math.random()*401);
+    y=(int)(Math.random()*401);
+    isMoving=true;
   }
   void show()
   {
-    //your code here
+    fill(255);
+    ellipse(x,y,10,10);
   }
   void lookDown()
   {
-    //your code here
+    
   }
   void erase()
   {
-    //your code here
+    fill(0);
+    ellipse(x,y,10,10);
   }
   void move()
   {
-    //your code here
+    if(isMoving==true){
+      y++;
+    }
   }
   void wrap()
   {
-    //your code here
+    if(y<0&&400<y){
+      y=0;
+      x=(int)(Math.random()*401);
+    }
   }
 }
 
