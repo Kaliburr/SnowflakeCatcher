@@ -50,11 +50,11 @@ class Snowflake
   void erase()
   {
     if(isMoving==false){
-    a++;
-    b++;
-    c++;
+    a+=50;
+    b+=50;
+    c+=50;
     ellipse(x,y,siz,siz);
-    y--;
+    y-=20;
     }
     if(get(x,y)==color(255)&&mousePressed){
       isMoving=true;
