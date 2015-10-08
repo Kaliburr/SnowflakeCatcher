@@ -2,7 +2,7 @@ Snowflake[]frosty;
 void setup()
 {
   size(400,400);
-  frameRate(500);
+  frameRate(400);
   frosty=new Snowflake[100];
   for(int i=0;i<frosty.length;i++){
     frosty[i]=new Snowflake();
@@ -67,7 +67,7 @@ class Snowflake
       b=214;
       c=237;
       fill(a,b,c);
-      y-=30;
+      y-=20;
     }
   }
   void wrap()
