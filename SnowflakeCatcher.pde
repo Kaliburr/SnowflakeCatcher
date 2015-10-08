@@ -2,6 +2,7 @@ Snowflake[]frosty;
 void setup()
 {
   size(400,400);
+  frameRate(500);
   frosty=new Snowflake[100];
   for(int i=0;i<frosty.length;i++){
     frosty[i]=new Snowflake();
@@ -9,7 +10,7 @@ void setup()
 }
 void draw()
 {
-  background(7,24,232,64);
+  background(0,0,232);
   for(int i=0;i<frosty.length;i++){
     frosty[i].show();
     frosty[i].lookDown();
