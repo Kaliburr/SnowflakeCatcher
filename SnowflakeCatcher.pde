@@ -67,7 +67,7 @@ class Snowflake
       b=214;
       c=237;
       fill(a,b,c);
-      y--;
+      y-=30;
     }
   }
   void wrap()
